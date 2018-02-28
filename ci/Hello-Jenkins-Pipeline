@@ -1,0 +1,12 @@
+timestamps {
+
+node () {
+
+	stage ('Hello Jenkins - Build') {
+ 			// Shell build step
+sh """ 
+cat /var/jenkins_home/jobs/Hello\\ Jenkins/config.xml 
+ """ 
+	}
+}
+}
