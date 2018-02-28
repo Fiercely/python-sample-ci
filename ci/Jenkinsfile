@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('The Stage Name is whatever you like') {
+            steps {
+                sh 'cat /var/jenkins_home/jobs/Hello-Pipeline/config.xml'
+            }
+        }
+        stage('This is a failling stage') {
+            steps {
+                echo 'YOU SHALL NOT PASS!!'
+                sh 'make it fail'
+            }
+        }
+        stage('This stage is not to be reached'){
+            steps {
+                echo 'Why am I echoing?'
+            }
+        }
+    }
+}
