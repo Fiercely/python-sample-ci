@@ -6,4 +6,4 @@ class Example(unittest.TestCase):
         self.branch = os.getenv("GIT_BRANCH")
 
     def test_branch(self):
-        self.assertEqual(self.branch, "origin/pipelines")
+        self.assertEqual(self.branch, "pipelines")
